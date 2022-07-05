@@ -4,9 +4,6 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Start {
 
     public static Performable withAnEmptyTodoList() {
@@ -16,10 +13,6 @@ public class Start {
     }
 
     public static Performable withATodoListContaining(String... items) {
-        return withATodoListContaining(Arrays.asList(items));
-    }
-
-    public static Performable withATodoListContaining(List<String> items) {
         return Task.where("{0} starts with a todo list containing " + String.join(", ", items),
             Open.browserOn().thePageNamed("home.page"),
             AddTodoItems.called(items)

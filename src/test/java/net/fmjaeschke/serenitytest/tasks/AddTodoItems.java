@@ -7,6 +7,7 @@ import net.thucydides.core.annotations.Step;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class AddTodoItems implements Task {
 
@@ -21,7 +22,7 @@ public class AddTodoItems implements Task {
         );
     }
 
-    public static AddTodoItems called(Collection<String> items) {
-        return new AddTodoItems(items);
+    public static AddTodoItems called(String... items) {
+        return new AddTodoItems(Stream.of(items).toList());
     }
 }
