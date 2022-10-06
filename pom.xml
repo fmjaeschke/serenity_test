@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <encoding>UTF-8</encoding>
 
-        <serenity.version>3.2.5</serenity.version>
+        <serenity.version>3.3.4</serenity.version>
     </properties>
 
     <dependencies>
